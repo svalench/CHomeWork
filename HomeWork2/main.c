@@ -6,7 +6,7 @@ int main()
     const N=23000;
     int num,clavisha;
     int PrCh,n=100,arr1[N],arr2[N],arr3[N],i1,i2=2,i3;
-    int clav2,array[N];
+    int clav2,array[N],x2,i21;
     printf("Control work 2. \n");
     printf(" TASK 1 - Work With 3 array \n TASK 2 - simetric array \n TASK 3 - sort arrays \n TASK 4 - work with math operation \n\n\n");
     while(clavisha!=27)
@@ -36,11 +36,40 @@ int main()
 
         break;
         case 2:
-            do
+            x2=0;
+            clav2=0;
+            while(clav2!=27)
             {
-
+                    printf("\n Inter number (intager) array[%d] = ",x2);
+                    scanf("%d",&array[x2]);
+                    printf("\nFor EXIT into add array press ESC! For repeat any key!\n");
+                    clav2 = getch();
+                    x2++;
             }
-            while()
+            printf("\n\n col - %d\n\n",x2);
+            if((x2-1)%2==0)
+            {
+                for(i21=1;i21<(x2-1)/2;i21++)
+                {
+                    if(array[(((x2-1)/2)-i21)]!=array[(((x2-1)/2)+i21)])
+                    {
+                            printf("\n\narray Not simetric!!!\n\n");
+                            break;
+                    }
+                }
+                if(x2/2==i21)
+                {
+                    printf("\n\nArray is simetric!!!\n\n");
+                }
+                else
+                {
+                    printf("\n\narray Not simetric!!! FOR %d\n\n",i21);
+                }
+            }
+            else
+            {
+                    printf("\n\n\n\n\narray Not simetric DDD!!!\n\n\n\n");
+            }
         break;
         default:
         printf("Not found task!!!");
