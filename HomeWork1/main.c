@@ -149,18 +149,20 @@ int main()
                 }
             }
             bufNok=bufNum*x3;
-            if(bufNum==num31)
+              if(bufNum==num31)
             {
-                if(bufNok%num32==0 && nok==0)
+                if(bufNok%num32==0)
                 {
                     nok=bufNok;
+                    break;
                 }
             }
             else
             {
-                if(bufNok%num31==0 && nok==0)
+                if(bufNok%num31==0 )
                 {
                     nok=bufNok;
+                    break;
                 }
             }
 
@@ -248,16 +250,9 @@ int main()
             scanf("%d",&kat1);
             printf("\n Vvedite dlinu 2 kateta:");
             scanf("%d",&kat2);
-            do
-            {
-                printf("\n Vvedite dlinu 3 kateta (ne dolzhna byt' bol'she %d):",kat1+kat2);
-                scanf("%d",&kat3);
-                if(kat3>(kat1+kat2))
-                {
-                    printf("\n\nVy vvely 3iy katet bjl'shii chem summa dvuh pervyh!\n ispravtes'! \n");
-                }
-            }
-            while(kat3>(kat1+kat2));
+                printf("\n Vvedite ugol ");
+                scanf("%d",&ugol);
+                kat3=sqrt((powl(kat1,2)+powl(kat2,2))-(((2*kat1)*kat2)*cos(ugol)));
             P=kat1+kat2+kat3;
             S=sqrt((P/2)*((P/2)-kat1)*((P/2)-kat2)*((P/2)-kat3));
         break;
